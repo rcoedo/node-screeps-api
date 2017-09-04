@@ -297,7 +297,7 @@ export class RawAPI extends EventEmitter {
         'X-Username': this.token
       }
     }
-    let url = URL.resolve(this.opts.url, path)
+    let url = URL.resolve(this.opts.url, this.opts.path + path)
     if (method === 'GET') {
       url += '?' + querystring.stringify(body)
     }
